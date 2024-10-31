@@ -76,15 +76,14 @@ WSGI_APPLICATION = 'deforestation.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "test",
+        "ENGINE": "mysql.connector.django",
+        "NAME": "test_django",
         "USER": "root",
         "PASSWORD": "Y15H28M52#",
-        "HOST": "127.0.0.1",
+        "HOST": "localhost",
         "PORT": "3306",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
