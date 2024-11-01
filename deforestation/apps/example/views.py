@@ -17,6 +17,10 @@ def add_example(request):
             return redirect('/')
         examples = Example.objects.all()
         return render(request, 'manage_example.html', {'examples': examples})
+def edit_example_view(request, id):
+    example = Example.objects.get(id=id)
+    return render(request, 'edit_example.html', {'example': example})
+
 def edit_example(request, id):
     example = Example.objects.get(id=id)
     if request.method == 'POST':

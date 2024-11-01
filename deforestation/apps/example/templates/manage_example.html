@@ -24,6 +24,7 @@
         <table class='table table-bordered'>
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>Name</th>
                     <th>Description</th>
                     <th>Actions</th>
@@ -32,10 +33,11 @@
             <tbody>
                 {% for example in examples %}
                 <tr>
+                    <td>{{ forloop.counter }}</td>
                     <td>{{ example.name }}</td>
                     <td>{{ example.description }}</td>
                     <td class='text-center'>
-                        <a href='/edit_example/{{ example.id }}/' class='btn btn-primary'>Edit</a>
+                        <a href='/edit_example_view/{{ example.id }}/' class='btn btn-primary'>Edit</a>
                         <a href='/delete_example/{{ example.id }}/' class='btn btn-danger'>Delete</a>
                     </td>
                 </tr>

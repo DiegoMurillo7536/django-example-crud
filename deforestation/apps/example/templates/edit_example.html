@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Example{% endblock %}
+{% block body %}
+<div class='col-md-6 col-md-offset-3'>
+    <h2>Edit example</h2>
+    <form action='/edit_example/{{ example.id }}/' method='post'>
+        {% csrf_token %}
+        <div class='form-group'>
+            <label for='name'>Name</label>
+            <input type='text' class='form-control' name='name' id='name' value='{{ example.name }}'>
+        </div>
+        <div class='form-group'>
+            <label for='description'>Description</label>
+            <input type='text' class='form-control' name='description' id='description' value='{{ example.description }}'>
+        </div>
+        <br>
+        <button type='submit' class='btn btn-success'>Submit</button>
+    </form>
+</div>
+{% endblock %}
