@@ -1,0 +1,9 @@
+# Apps
+deforestation/apps/example/migrations
+deforestation/apps/example/migrations/__pycache__
+deforestation/apps/example/__pycache__
+
+# Django
+deforestation/deforestation/__pycache__
+# Database
+deforestation/db.sqlite3

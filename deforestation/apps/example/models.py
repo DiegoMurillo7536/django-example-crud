@@ -11,3 +11,6 @@ class Example(models.Model):
 
     class Meta:
         db_table = "example"
+    
+    def __str__(self):
+        return self.name
